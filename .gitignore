@@ -1,0 +1,54 @@
+# ==============================
+# Node / Frontend (.gitignore)
+# ==============================
+node_modules/
+.next/
+out/
+build/
+.cache/
+.pnpm-store/
+
+# Dependencias e logs (npm/pnpm/yarn)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==============================
+# Python / Backend (.gitignore)
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Django specific
+*.log
+local_settings.py
+anyway-backend/db.sqlite3
+anyway-backend/db.sqlite3-journal
+
+# Archivos estáticos y subidas
+anyway-backend/media/
+anyway-backend/staticfiles/
+
+# Temp yt-dlp y caché
+*.mp3
+*.mp4
+*.webm
+
+# ==============================
+# Global & Entorno (.gitignore)
+# ==============================
+.env
+.env.local
+.env.*.local
+*.pem
+.DS_Store
+Thumbs.db
+node_modules

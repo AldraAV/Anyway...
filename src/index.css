@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-editorial: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-background: #080c25;
+  --color-surface: #080c25;
+  --color-surface-dim: #080c25;
+  --color-surface-bright: #232950;
+  --color-surface-container-lowest: #000000;
+  --color-surface-container-low: #0c112d;
+  --color-surface-container: #121735;
+  --color-surface-container-high: #181d3e;
+  --color-surface-container-highest: #1d2347;
+  
+  --color-primary: #ff8aa3;
+  --color-primary-dim: #e50062;
+  --color-on-primary: #630026;
+  --color-primary-container: #ff7293;
+  
+  --color-secondary: #d277ff;
+  --color-secondary-dim: #b031ed;
+  --color-on-secondary: #380052;
+  --color-secondary-container: #9700d3;
+  
+  --color-tertiary: #ff8257;
+  --color-tertiary-dim: #ff7442;
+  --color-on-tertiary: #4e1300;
+  --color-tertiary-container: #fe6a34;
+
+  --color-on-surface: #e2e3ff;
+  --color-on-surface-variant: #a6a9c9;
+  --color-outline: #707392;
+  --color-outline-variant: #424662;
+}
+
+@layer utilities {
+  .lava-gradient {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary), var(--color-tertiary));
+  }
+  
+  .lava-gradient-text {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary), var(--color-tertiary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .aurora-pulse {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .glass-panel {
+    background: rgba(18, 23, 53, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .ghost-border {
+    border: 1px solid rgba(66, 70, 98, 0.2);
+  }
+
+  .neon-glow-primary {
+    box-shadow: 0px 10px 40px rgba(255, 138, 163, 0.15);
+  }
+
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-outline-variant);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-outline);
+  }
+}
+
+body {
+  overflow-x: hidden;
+}

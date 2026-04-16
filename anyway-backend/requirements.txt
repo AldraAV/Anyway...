@@ -1,0 +1,12 @@
+django>=4.2,<6.0
+djangorestframework>=3.14
+django-cors-headers>=4.3
+djangorestframework-simplejwt>=5.3
+psycopg2-binary>=2.9
+python-dotenv>=1.0
+
+# AI — solo Groq (transcripción + resumen + traducción vía API)
+groq>=0.9
+
+# Descarga de audio de YouTube
+yt-dlp>=2024.4
