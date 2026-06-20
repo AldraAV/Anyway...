@@ -52,3 +52,5 @@ anyway-backend/staticfiles/
 .DS_Store
 Thumbs.db
 node_modules
+
+graphify-out/
